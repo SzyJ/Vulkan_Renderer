@@ -1,0 +1,9 @@
+[submodule "renderer/libs/spdlog"]
+	path = renderer/libs/spdlog
+	url = https://github.com/gabime/spdlog
+[submodule "renderer/libs/glfw"]
+	path = renderer/libs/glfw
+	url = https://github.com/glfw/glfw
+[submodule "renderer/libs/glm"]
+	path = renderer/libs/glm
+	url = https://github.com/g-truc/glm
