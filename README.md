@@ -1,6 +1,4 @@
 # Vulkan Tutorial Renderer
-🔥 | Simple Vulkan renderer built with Vulkan Tutorial
-
 This project setup assumes that the Vulkan SDK is installed and therefore ```VULKAN_SDK``` environment variable is defined.
 
 If you wish to clone this project, make sure to clone all the submodules too:
