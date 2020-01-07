@@ -5,11 +5,6 @@
 class InstanceBuilder {
 public:
     static VkResult Build(VkInstance& instance, const char** extensions = nullptr, uint32_t extensionCount = 0) {
-
-        std::string test(*extensions);
-
-        std::cout << test << "\n";
-
         VkApplicationInfo appInfo = {};
         appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
         appInfo.pApplicationName = "Hello Triangle";
@@ -29,6 +24,6 @@ public:
 
         createInfo.enabledLayerCount = 0;
 
-		return vkCreateInstance(&createInfo, nullptr, &instance);
+        return vkCreateInstance(&createInfo, nullptr, &instance);
     }
 };

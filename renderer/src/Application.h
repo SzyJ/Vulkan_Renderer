@@ -16,6 +16,9 @@ private:
     VkInstance m_Instance;
 
     void Init();
+    void SetupInstance();
+    void PrintAvailableExtensions();
+
     void MainLoop();
     void CleanUp();
 };
