@@ -20,3 +20,7 @@ void Window::Update() {
 bool Window::IsOpen() {
     return !glfwWindowShouldClose(m_Window);
 }
+
+const char** Window::GetRequiredExtentions(uint32_t& extensionCount) {
+    return glfwGetRequiredInstanceExtensions(&extensionCount);
+}
