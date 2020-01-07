@@ -1,9 +1,10 @@
 #include "Application.h"
 #include "utils/InstanceBuilder.h"
+#include "utils/Devices.h"
 
 void Application::Init() {
     SetupInstance();
-
+    PickPhysicalDevice();
     //PrintAvailableExtensions();
 }
 
@@ -15,6 +16,13 @@ void Application::SetupInstance() {
 
     if (InstanceBuilder::Build(m_Instance, extensions, extensionCount) != VK_SUCCESS) {
         throw std::runtime_error("Failed to create instance!");
+    }
+}
+
+void Application::PickPhysicalDevice() {
+    Devices::PickPhysicalDevice(m_PhysicalDevice, m_Instance);
+    if (m_PhysicalDevice == VK_NULL_HANDLE) {
+        throw std::runtime_error("Failed to find a suitable GPU!");
     }
 }
 
